@@ -1,2 +1,2 @@
 import React, { useState, useContext } from 'react'
-import sublinks from './data'
+import sublinks from '../data'
