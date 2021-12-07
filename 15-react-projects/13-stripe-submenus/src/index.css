@@ -257,7 +257,7 @@ Stripe Styles
 /* hero media query */
 @media screen and (min-width: 800px) {
   .hero::before {
-    background-size: contain;
+    background-size: cover;
     height: 100%;
   }
   .hero-center {
