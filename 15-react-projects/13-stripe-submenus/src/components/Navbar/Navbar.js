@@ -4,6 +4,8 @@ import { useGlobalContext } from "../../contexts/context";
 import logo from "../../images/logo.svg";
 import { FaBars } from "react-icons/fa";
 
+import './navbar.css'
+
 const Navbar = () => {
   const { openSidebar, openSubmenu, closeSubmenu } = useGlobalContext();
 
@@ -15,8 +17,14 @@ const Navbar = () => {
     openSubmenu(page, { center, bottom });
   };
 
+  const handleSubmenu = (e) => {
+    if(!e.target.classList.contains('link-btn')){
+      closeSubmenu()
+    }
+  }
+
   return (
-    <nav className="nav">
+    <nav className="nav" onMouseOver={handleSubmenu}>
       <div className="nav-center">
         <div className="nav-header">
           <img src={logo} className="nav-logo" alt="stripe logo" />
